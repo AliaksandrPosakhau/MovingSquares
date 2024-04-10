@@ -1,0 +1,12 @@
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\MovingSquares.exe.config
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\MovingSquares.exe
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\MovingSquares.pdb
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\sfml-audio.dll
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\sfml-graphics.dll
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\sfml-system.dll
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\bin\Debug\sfml-window.dll
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\obj\Debug\MovingSquares.csproj.AssemblyReference.cache
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\obj\Debug\MovingSquares.csproj.CoreCompileInputs.cache
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\obj\Debug\MovingSquares.csproj.CopyComplete
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\obj\Debug\MovingSquares.exe
+C:\Users\ria_b\source\repos\MovingSquares\MovingSquares\obj\Debug\MovingSquares.pdb
