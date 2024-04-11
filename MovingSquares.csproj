@@ -59,11 +59,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Game.cs" />
+    <Compile Include="Mathf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Square\EnemySquareRed.cs" />
     <Compile Include="Square\PlayerSquareBlack.cs" />
     <Compile Include="Square\Square.cs" />
+    <Compile Include="Square\SquaresList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

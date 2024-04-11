@@ -26,17 +26,8 @@ namespace MovingSquares
         }
 
         public void Move() {
-            Vector2f direction = movementTarget-shape.Position;
-            float magnitude = (float)Math.Sqrt(direction.X * direction.Y + direction.Y * direction.Y);
 
-            if (magnitude <= movementSpeed) {
-                shape.Position = movementTarget;
-            }
-
-            else
-            {
-                shape.Position += direction / magnitude * movementSpeed;
-            }
+            shape.Position = Mathf.MoveTowards(shape.Position, movementTarget, movementSpeed);
             
             if (shape.Position == movementTarget)
             {
@@ -63,9 +54,9 @@ namespace MovingSquares
         }
 
         public void UpdateMovementTarget() {
-        Random random = new Random();
-            movementTarget.X = random.Next(movementBounds.Left, movementBounds.Left + movementBounds.Width);
-            movementTarget.Y = random.Next(movementBounds.Top, movementBounds.Top + movementBounds.Height);
+         
+            movementTarget.X = Program.Random.Next(movementBounds.Left, movementBounds.Left + movementBounds.Width);
+            movementTarget.Y = Program.Random.Next(movementBounds.Top, movementBounds.Top + movementBounds.Height);
         }
 
         protected virtual void OnClick() { }

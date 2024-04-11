@@ -10,11 +10,11 @@ namespace MovingSquares
 {
     public class EnemySquareRed : Square
     {
-        private static float MaxMovementSpeed = 5;
+        private static float MaxMovementSpeed = 8;
         private static Color Color = new Color(230,50,50);
         private static float MovementStep = 0.1f;
-        private static float MaxSize = 200;
-        private static float SizeStep = 10;
+        private static float MaxSize = 400;
+        private static float SizeStep = 5;
 
         public EnemySquareRed(Vector2f position, float movementSpeed, IntRect movementBounds) : base(position, movementSpeed, movementBounds) { 
         shape.FillColor = Color;
