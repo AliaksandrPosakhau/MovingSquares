@@ -10,10 +10,8 @@ namespace MovingSquares
     {   
         static uint APPLICATION_WINDOW_WIDTH = 1400;
         static uint APPLICATION_WINDOW_HEIGHT = 900;
-
         static string GAME_TITLE = "Moving Squares 1.0";
-
-        public static Random Random = new Random();
+                
         static void Main(string[] args)
         {
             RenderWindow window = new RenderWindow(new VideoMode(APPLICATION_WINDOW_WIDTH, APPLICATION_WINDOW_HEIGHT), GAME_TITLE);
@@ -27,12 +25,7 @@ namespace MovingSquares
                 window.Clear(new Color(230, 230, 230));
                 window.DispatchEvents();
 
-                game.Update(window);
-
-
-
-
-
+                game.Update(window); 
                 window.Display();
             }
         }

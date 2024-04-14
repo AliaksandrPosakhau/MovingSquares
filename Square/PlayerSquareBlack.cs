@@ -23,6 +23,8 @@ namespace MovingSquares
 
         protected override void OnClick()
         {
+            Game.Scores++;
+
            shape.Size-= new Vector2f(SizeStep, SizeStep);
 
             if (shape.Size.X < MinSize)
@@ -33,7 +35,6 @@ namespace MovingSquares
 
             UpdateMovementTarget();
             shape.Position = movementTarget;
-            UpdateMovementTarget();
         }
 
     }

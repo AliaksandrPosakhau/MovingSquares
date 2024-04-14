@@ -10,9 +10,9 @@ namespace MovingSquares
 {
     public class EnemySquareRed : Square
     {
-        private static float MaxMovementSpeed = 8;
+        private static float MaxMovementSpeed = 3;
         private static Color Color = new Color(230,50,50);
-        private static float MovementStep = 0.1f;
+        private static float MovementStep = 0.05f;
         private static float MaxSize = 400;
         private static float SizeStep = 5;
 
@@ -22,7 +22,7 @@ namespace MovingSquares
 
         protected override void OnClick()
         {
-            
+            Game.IsLost = true;
         }
 
         protected override void OnReachedTarget()

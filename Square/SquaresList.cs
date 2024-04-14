@@ -14,14 +14,27 @@ namespace MovingSquares
         static uint APPLICATION_WINDOW_WIDTH = 1400;
         static uint APPLICATION_WINDOW_HEIGHT = 900;
         private List<Square> squares;
+        public bool SquareHasRemoved;
+        public Square RemovedSquare;
 
         public SquaresList()
         {
             squares = new List<Square>();
         }
 
+        public void Reset()
+        {
+            SquareHasRemoved = false;
+            RemovedSquare = null;
+            squares.Clear();
+
+        }
+
         public void Update(RenderWindow window)
         {
+            SquareHasRemoved = false;
+            RemovedSquare = null;
+
             if (Mouse.IsButtonPressed(Mouse.Button.Left) == true)
             {
 
@@ -35,8 +48,18 @@ namespace MovingSquares
             {
                 squares[i].Move();
                 squares[i].Draw(window);
+
+                if (squares[i].isActive == false)
+                {
+                    RemovedSquare = squares[i];
+                    squares.Remove(squares[i]);
+                    SquareHasRemoved = true;
+                }
+
             }
         }
+
+
 
         public void SpawnPlayerSquare()
         {
