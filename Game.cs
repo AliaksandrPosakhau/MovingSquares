@@ -38,14 +38,9 @@ namespace MovingSquares
             loseText.FillColor = Color.Red;
             loseText.DisplayedString = "GAME IS LOST. HIT \"R\" TO RESTART";
             loseText.CharacterSize = 16;
-            loseText.Position = new SFML.System.Vector2f(550, 450);
-
-
-
-
-
-            Reset();
+            loseText.Position = new SFML.System.Vector2f(50, 450);
              
+            Reset();            
         }
 
         private void Reset()
@@ -90,7 +85,6 @@ namespace MovingSquares
                     }
                 }
             }
-
 
            scoreText.DisplayedString = "SCORE: "+Scores.ToString()+"\nMAX: "+ MaxScore.ToString();
            window.Draw(scoreText);

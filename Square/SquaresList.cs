@@ -11,8 +11,6 @@ namespace MovingSquares
 {
     public class SquaresList
     {
-        static uint APPLICATION_WINDOW_WIDTH = 1400;
-        static uint APPLICATION_WINDOW_HEIGHT = 900;
         private List<Square> squares;
         public bool SquareHasRemoved;
         public Square RemovedSquare;
@@ -55,24 +53,16 @@ namespace MovingSquares
                     squares.Remove(squares[i]);
                     SquareHasRemoved = true;
                 }
-
             }
         }
 
-
-
         public void SpawnPlayerSquare()
         {
-            squares.Add(new PlayerSquareBlack(new Vector2f(Mathf.Random.Next(0,(int)APPLICATION_WINDOW_WIDTH), Mathf.Random.Next(0, (int)APPLICATION_WINDOW_HEIGHT)),
-                    5, new IntRect(0, 0, (int)APPLICATION_WINDOW_WIDTH, (Int32)APPLICATION_WINDOW_HEIGHT)));
-
-            squares.Add(new PlayerSquareBlack(new Vector2f(Mathf.Random.Next(0, (int)APPLICATION_WINDOW_WIDTH), Mathf.Random.Next(0, (int)APPLICATION_WINDOW_HEIGHT)),
-                    5, new IntRect(0, 0, (int)APPLICATION_WINDOW_WIDTH, (int)APPLICATION_WINDOW_HEIGHT)));
+            squares.Add(new PlayerSquareBlack(new Vector2f(Mathf.Random.Next(0,800), Mathf.Random.Next(0, 600)), 1, new IntRect(0, 0, 700, 500)));
         }
 
         public void SpawnEnemySquare() {
-            squares.Add(new EnemySquareRed(new Vector2f(Mathf.Random.Next(0, (int)APPLICATION_WINDOW_WIDTH), Mathf.Random.Next(0, (int)APPLICATION_WINDOW_HEIGHT)),
-                    5, new IntRect(0, 0, (int)APPLICATION_WINDOW_WIDTH, (int)APPLICATION_WINDOW_HEIGHT)));
+            squares.Add(new EnemySquareRed(new Vector2f(Mathf.Random.Next(0, 800), Mathf.Random.Next(0, 600)), 2, new IntRect(0, 0, 700, 500)));           
         }
     }
 }

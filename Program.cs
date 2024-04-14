@@ -8,15 +8,13 @@ namespace MovingSquares
 {
     public class Program
     {   
-        static uint APPLICATION_WINDOW_WIDTH = 1400;
-        static uint APPLICATION_WINDOW_HEIGHT = 900;
         static string GAME_TITLE = "Moving Squares 1.0";
                 
         static void Main(string[] args)
         {
-            RenderWindow window = new RenderWindow(new VideoMode(APPLICATION_WINDOW_WIDTH, APPLICATION_WINDOW_HEIGHT), GAME_TITLE);
+            RenderWindow window = new RenderWindow(new VideoMode(800, 600), GAME_TITLE);
             window.Closed += Window_Closed;
-            window.SetFramerateLimit(60);
+            window.SetFramerateLimit(90);
 
             Game game = new Game();
              

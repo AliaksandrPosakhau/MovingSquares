@@ -55,8 +55,9 @@ namespace MovingSquares
 
         public void UpdateMovementTarget() {
          
-            movementTarget.X = Mathf.Random.Next(movementBounds.Left, movementBounds.Left + movementBounds.Width);
-            movementTarget.Y = Mathf.Random.Next(movementBounds.Top, movementBounds.Top + movementBounds.Height);
+            movementTarget.X = Mathf.Random.Next(movementBounds.Left, ((movementBounds.Left + movementBounds.Width)- movementBounds.Width/2));
+            movementTarget.Y = Mathf.Random.Next(movementBounds.Top, ((movementBounds.Top + movementBounds.Height)- movementBounds.Height/2));
+            
         }
 
         protected virtual void OnClick() { }

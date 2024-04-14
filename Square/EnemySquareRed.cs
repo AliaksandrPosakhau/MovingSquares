@@ -13,7 +13,7 @@ namespace MovingSquares
         private static float MaxMovementSpeed = 3;
         private static Color Color = new Color(230,50,50);
         private static float MovementStep = 0.05f;
-        private static float MaxSize = 400;
+        private static float MaxSize = 1000;
         private static float SizeStep = 5;
 
         public EnemySquareRed(Vector2f position, float movementSpeed, IntRect movementBounds) : base(position, movementSpeed, movementBounds) { 
