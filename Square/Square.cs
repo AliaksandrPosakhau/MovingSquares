@@ -27,10 +27,13 @@ namespace MovingSquares
 
         public void Move() {
 
-            shape.Position = Mathf.MoveTowards(shape.Position, movementTarget, movementSpeed);
-            
-            if (shape.Position == movementTarget)
+            Vector2f direction = movementTarget - shape.Position;
+            float magnitude = (float)Math.Sqrt(direction.X * direction.X + direction.Y * direction.Y);
+            shape.Position += direction / magnitude * movementSpeed;
+
+            if (magnitude <= movementSpeed)
             {
+                shape.Position = movementTarget;
                 OnReachedTarget();
                 UpdateMovementTarget();
             }
