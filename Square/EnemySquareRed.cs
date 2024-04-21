@@ -2,6 +2,7 @@
 using SFML.System;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ namespace MovingSquares
         private static float MovementStep = 0.05f;
         private static float MaxSize = 1000;
         private static float SizeStep = 5;
+        
 
         public EnemySquareRed(Vector2f position, float movementSpeed, IntRect movementBounds) : base(position, movementSpeed, movementBounds) { 
         shape.FillColor = Color;
@@ -35,7 +37,13 @@ namespace MovingSquares
             if (shape.Size.X < MaxSize) 
             {
                 shape.Size += new Vector2f(SizeStep, SizeStep);
+                Console.WriteLine(shape.Size);                 
             }
+
+            if (EnemySquareListener.trackBlackShapesSuperiority()==true) {
+                shape.Size += new Vector2f(SizeStep*3, SizeStep*3);
+            }
+            EnemySquareListener.tick();
         }
     }
 

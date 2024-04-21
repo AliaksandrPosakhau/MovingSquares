@@ -58,11 +58,20 @@ namespace MovingSquares
 
         public void SpawnPlayerSquare()
         {
-            squares.Add(new PlayerSquareBlack(new Vector2f(Mathf.Random.Next(0,800), Mathf.Random.Next(0, 600)), 1, new IntRect(0, 0, 700, 500)));
+            squares.Add(new PlayerSquareBlack(
+                new Vector2f(Mathf.Random.Next(0,GameWindowSettings.APPLICATION_WINDOW_WIDTH),
+                Mathf.Random.Next(0, GameWindowSettings.APPLICATION_WINDOW_HEIGHT)),
+                GameWindowSettings.APPLICATION_BLACK_SHAPE_SPEED,
+                new IntRect(0, 0, GameWindowSettings.APPLICATION_WINDOW_WIDTH, GameWindowSettings.APPLICATION_WINDOW_HEIGHT)));
+            EnemySquareListener.increaseAmountOfBlackShapes();
         }
 
         public void SpawnEnemySquare() {
-            squares.Add(new EnemySquareRed(new Vector2f(Mathf.Random.Next(0, 800), Mathf.Random.Next(0, 600)), 2, new IntRect(0, 0, 700, 500)));           
+            squares.Add(new EnemySquareRed(
+                new Vector2f(Mathf.Random.Next(0, GameWindowSettings.APPLICATION_WINDOW_WIDTH),
+                Mathf.Random.Next(0, GameWindowSettings.APPLICATION_WINDOW_HEIGHT)),
+                GameWindowSettings.APPLICATION_RED_SHAPE_SPEED,
+                new IntRect(0, 0, GameWindowSettings.APPLICATION_WINDOW_WIDTH, GameWindowSettings.APPLICATION_WINDOW_HEIGHT)));
         }
     }
 }

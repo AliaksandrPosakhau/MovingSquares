@@ -12,18 +12,23 @@ namespace MovingSquares
                 
         static void Main(string[] args)
         {
-            RenderWindow window = new RenderWindow(new VideoMode(800, 600), GAME_TITLE);
+            RenderWindow window = new RenderWindow(
+                new VideoMode((uint)GameWindowSettings.APPLICATION_WINDOW_WIDTH,
+                (uint)GameWindowSettings.APPLICATION_WINDOW_HEIGHT), GAME_TITLE);
+
             window.Closed += Window_Closed;
-            window.SetFramerateLimit(90);
+            window.SetFramerateLimit((uint)GameWindowSettings.APPLICATION_FRAMERATE_LIMIT);
+             
 
             Game game = new Game();
-             
+ 
+
             while (window.IsOpen==true) {
 
                 window.Clear(new Color(230, 230, 230));
                 window.DispatchEvents();
 
-                game.Update(window); 
+                game.Update(window);
                 window.Display();
             }
         }

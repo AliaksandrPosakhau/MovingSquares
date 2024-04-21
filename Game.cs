@@ -84,6 +84,11 @@ namespace MovingSquares
                         squares.SpawnEnemySquare();
                     }
                 }
+
+                if (EnemySquareListener.trackEventCounter()==true)
+                {
+                    squares.SpawnPlayerSquare();
+                }
             }
 
            scoreText.DisplayedString = "SCORE: "+Scores.ToString()+"\nMAX: "+ MaxScore.ToString();

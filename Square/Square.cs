@@ -13,9 +13,12 @@ namespace MovingSquares
         public bool isActive = true;
 
         protected RectangleShape shape;
+        protected CircleShape circleShape;
         protected float movementSpeed;
         protected Vector2f movementTarget;
         protected IntRect movementBounds;
+
+   
 
         public Square(Vector2f position, float movementSpeed, IntRect movementBounds) {
             shape = new RectangleShape(new Vector2f(100,100));
